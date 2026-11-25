@@ -1,0 +1,5 @@
+application: demo
+database: !include settings/database.yaml
+services:
+  - !include settings/service.yaml
+  - name: local-worker

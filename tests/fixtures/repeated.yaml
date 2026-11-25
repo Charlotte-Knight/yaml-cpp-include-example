@@ -1,0 +1,2 @@
+first: !include ../../examples/settings/service.yaml
+second: !include ../../examples/settings/service.yaml

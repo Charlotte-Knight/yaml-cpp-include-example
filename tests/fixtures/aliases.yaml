@@ -1,0 +1,5 @@
+defaults: &defaults
+  service: !include ../../examples/settings/service.yaml
+copy: *defaults
+recursive: &recursive
+  self: *recursive
