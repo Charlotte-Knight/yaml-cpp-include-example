@@ -51,6 +51,12 @@ int main(int argc, char** argv) {
     require(load_yaml_with_includes(fixtures / "root.yaml")["name"]
                 .as<std::string>() == "api",
             "Root include failed");
+    const YAML::Node root_example =
+        load_yaml_with_includes(examples / "root-include.yaml");
+    require(root_example["application"].as<std::string>() == "demo" &&
+                root_example["database"]["credentials"]["username"]
+                        .as<std::string>() == "example",
+            "Root example must resolve the included document and its includes");
     const YAML::Node repeated = load_yaml_with_includes(fixtures / "repeated.yaml");
     require(repeated["first"]["name"].as<std::string>() == "api" &&
                 repeated["second"]["name"].as<std::string>() == "api",

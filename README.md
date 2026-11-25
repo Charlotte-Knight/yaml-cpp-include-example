@@ -18,6 +18,15 @@ ctest --test-dir build --output-on-failure
 
 The program prints the resolved YAML.
 
+For a root-level include, run:
+
+```sh
+./build/yaml_include_example examples/root-include.yaml
+```
+
+The [root-level example](examples/root-include.yaml) includes the whole
+`config.yaml` document, including its nested includes.
+
 To use the result in C++, call
 `load_yaml_with_includes(path)` from `include/yaml_include.hpp` and read the
 returned `YAML::Node` normally:
