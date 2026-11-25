@@ -46,4 +46,3 @@ parse errors and include cycles are reported as errors.
 
 The loader reads paths specified by the YAML without restricting them to a
 particular directory. Only use it with trusted YAML and trusted included files.
-# yaml-cpp-include-example
